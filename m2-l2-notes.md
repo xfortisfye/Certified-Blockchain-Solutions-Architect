@@ -149,6 +149,251 @@ Considerations on private vs public blockchain
 - Privacy
 - Security
 
+# 2.6 Blockchain Considerations
 
+| | Ethereum | Hyperledger |
+| --- | --- | --- |
+| Industry | Cross-Industry | Cross-Industry |
+| Ledger | Permissionless | Permissioned |
+| Consensus | POW | Pluggable Architecture |
+| Smart Contracts | Yes | Yes |
+| Coin/Token | Yes | No |
+
+- Understand the industry that the blockchain is going to serve. 
+  - Ethereum and Hyperledger are both considered to be cross-industry blockchains 
+  - Ripple (more focused on financial industry) 
+- Cross-industry 
+  - Able to integrate it with your specific enterprise vertical 
+    - Hyperledger can be used for EDI or logistics 
+- Ledger 
+  - Ethereum is for open blockchain approach 
+  - Hyperledger is for enterprise 
+- Consensus 
+  - How it affects performance 
+- Smart Contracts 
+  - Does your blockchain support smart contract 
+- Coin/Token 
+  - Ethereum has native cryptocurrency such as Ether 
+  - Hyperledger has no native cryptocurrency or token 
+
+# 2.7 Trust or Trustless Blockchain 
+
+Trust Blockchain 
+- Establishing Trust In Blockchain 
+  - Essentially transferring trust from an intermediary to technology  
+  - Storing data in blockchain through cryptography functions 
+  - All transaction data on the BC is assumed to be trustworthy 
+  - Data has not been tampered with 
+  - Blockchain is immutable (can't be deleted or modified) 
+
+Trustless Blockchain 
+- What is trustless in Blockchain 
+  - Trustless as it is a model that does not require trust to safely interact and transact a deed or purchase 
+  - Trustless blockchain is a transfer of trust to technology from organizations (Banks, Government, Corporations) 
+  - Built on premise that "transparent code" essentially removes the need for intermediaries (technology) 
+  - Smart contracts essentially reduce the need for accountants, lawyers, bankers etc as trust is formed. 
+  - Financial transparency can result through the use of blockchains and thus reduce the need for intermediaries 
+  - Ledger act as a trust broker when two parties don't trust each other 
+
+# 2.8 Blockchain Forks and Segwits 
+
+Forks 
+- Fork is a change to the software of the digital currency that creates two separate versions of the blockchain with a shared history (One Dominant) 
+- Can be permanent or temporary 
+- Snapshot date where a snapshot of the ledger is captured 
+- The snapshot happens at a block number and a new currency is a result (Bitcoin and Bitcoin Cash, Litecoin and Litecoin Cash) 
+
+Hard Fork (Major Upgrade) 
+- A hard fork describe a major change to the blockchain protocol which makes previously blocks invalid or transactions valid. 
+- Can be used to keep the same coin with major changes to the blockchain or to create a new coin 
+- Requires all nodes to upgrade to the latest version of the protocol software if they want to use the new coin or blockchain 
+
+Soft Fork (Minor Upgrade) 
+- A change that is backward compatible. Instead of 1MB blocks, new rule might only allow 500k blocks 
+- A small feature or a capability that has essentially change 
+- A change to the software protocol where only previously valid blocks/transactions are made invalid 
+- Soft forks need a majority of hash power in the network 
+
+Soft Fork vs Hard Fork
+| Soft Fork | Hard Fork |
+| --- | --- |
+| Tightening the rules (E.g., 1MB -> 0.5MB) | Expanding the rules (E.g., 1MB -> 2MB) |
+| Backwards compatible | Not backwards compatible |
+| Old nodes accept new blocks | Old nodes don't accept new blocks |
+
+Hard Fork Examples 
+- Ethereum Classic is a split from an existing cryptocurrency Ethereum after a hard fork. 
+- Monero is a hard-fork to introduce an upgrade to its network by implementing a feature called Ring Confidential Transactions (RCT) to improve its privacy and security 
+- Bitcoin Cash is a hard fork orchestrated by a portion of the community that wanted Bitcoin to scale by increasing its block size from the current 1MB to 8MB 
+ 
+Soft Fork Examples 
+- BIP 66: Soft Fork on Bitcoin's signature validation 
+- P2SH: Soft Fork that enabled multi-signature addresses in Bitcoin's network 
+ 
+Segwit (Segregated Witness) 
+- Separate transaction signatures 
+- Removes signatures. 
+- Create efficiency of transactions by removing signatures to free up capacity to add more transactions to the chain 
+- Increases security threats by removing digital signatures 
+- Improves scalability issue (UTX0) 
+- Reduces transaction times by skipping calculation for signatures 
+- Enables off-chain protocols (P2SH256) 
+- Improve transaction security by reducing malleability (ability to be shaped) (transaction malleability) 
+ 
+
+# 2.9 Comparing Crypto Currency vs Blockchain 
+
+Cryptocurrency 
+- Digital currencies are secured using cryptography and combining that with their role as a currency 
+- Mined, not printed 
+- Considered as digital gold, digital silver 
+- E.g., Bitcoin, Litecoin, Monero, Dash, Ether, Ripple 
+ 
+Initial Coin Offering 
+- An event in which new cryptocurrency sells advance tokens from its overall coinbase in exchange for upfront capital 
+- ICOs are frequently used to help developers raise capital
+
+![img](img/2.9_01.png)
+
+Differences between Cryptocurrency and Blockchain 
+- Blockchain is the platform / Blockchain is the enabler 
+- Cryptos like Bitcoin uses the blockchain platform / Cryptocurrency uses Blockchain Technology 
+- Bitcoin is the first known software (token) for blockchain 
+- Platform vs Application 
+- BTC is a P2P cryptocurrency that uses the P2P platform (Blockchain) 
+- Ethereum is a platform, Ether is the Cryptocurrency 
+ 
+Analogy 
+- Blockchain is the train track (Platforms are the enabler) 
+- Cryptos are the trains on the track (Applications are enabled)
+
+# 2.10 Bitcoin Improvement Proposal 
+
+Bitcoin Improvement Proposal 
+- BIP is a design document for introducing features or information to Bitcoin 
+- BIP should provide a concise technical specification of the feature and a rationale for the feature 
+- Standard way of communicating ideas since Bitcoin has no formal structure 
+- Any developer or anyone from anywhere in the world can propose a BIP 
+- Whole Bitcoin community of users, miners, developers and investors to vote on it 
+ 
+Three Major Types of BIPs 
+- Standard tracks 
+- Informational 
+- Process 
+
+Standard Track BIPs 
+- Entail making changes to the network protocol, block or transaction validation method 
+- It intends to affect the interoperability of the two versions of BIPs or Bitcoin 
+- Requires community consensus (E.g., BIP 91) 
+ 
+Informational BIPs 
+- Highlight design issues, general guidelines and supporting information 
+- E.g., BIP 32 
+ 
+Process BIPs 
+- Describe or propose a change in the process 
+- Similar to Standard Track BIP and require community consensus 
+- E.g., BIP 2 
+
+# 2.11 Cryptocurrency Wallet
+
+Wallet 
+- A program which allows you to gain access to send, and receive bitcoins on the blockchain 
+- Several types of bitcoin wallets: Hardware, Software, Web 
+
+Software Wallet 
+- Programs that you download and run on personal computer 
+
+Web Wallet 
+- Hosted on website of a company which provides bitcoin wallet services 
+- Wallets are easier to set up and use, but have to rely on hosting company to provide sufficient security measures, which can sometimes be a dangerous trade off  
+- Coinbase is an online exchange that is hosted in US 
+
+Hardware Wallet 
+- Maintains high levels of security to protect your coins by storing your coins offline 
+- Offline storage keeps your coins out of reach from hackers because they are not on the Internet 
+- Cost is more expensive than a software or web wallet 
+ 
+Paper Wallet 
+- Offline wallet and is considered the safest type 
+- Just a printout 
+ 
+Wallet Security 
+- Restrict unsupervised accessed. Strong passwords and close all ports and maintain a strict firewall 
+- Frequently change address. Use a different address for every transaction 
+- Multiple Signatures. Multiple private keys to deter breaches. 
+ 
+Ethereum Wallets 
+- E.g., Metamask, Myetherwallet, Jaxx (multi-cryptocurrency wallet) 
+
+# 2.12 Value Creation 
+
+Value Creation of Blockchain Technology 
+- Costing 
+- Security 
+- Privacy 
+- Efficiency (Remove Intermediaries) 
+- Open source 
+ 
+Value Creation of Blockchain Technology with Tokens 
+- Tokens are used as a store of value as entries on a blockchain ledger 
+- You own these tokens because you have a key that lets you create a new entry on the ledger, re-assigning the ownership to someone else 
+- You don't store tokens on your computer; you store the keys that let you reassign the quantity 
+- These are digital resources that you control and can reassign control to someone else 
+ 
+Value Creation of Blockchain Technology with Smart Contracts 
+- Smart Contracts is a computer program code that is capable of facilitating, executing, and enforcing the negotiation or performance of an agreement using Blockchain technology 
+- Entire process is automated and it can act as a complement or substitute for legal contracts, where the terms of the smart contract are recorded in a computer language as a set of instructions 
+- Are not legally enforceable 
+- Provide autonomy, trust, backup (immutable), safety, speed, savings (no need for intermediaries), accuracy (removing human factor)
+
+# 2.13 Ethereum Denominations 
+
+| Unit | Wei | Wei |
+| --- | --- | --- |
+| Wei | 1wei | 1 | 
+| Kwei | 1e3wei | 1,000 | 
+| Mwei | 1e6wei | 1,000,000 | 
+| Gwei (Shannon) | 1e9wei | 1,000,000,000 | 
+| Microether | 1e12wei | 1,000,000,000,000 | 
+| Milliether (Finney) | 1e15wei | 1,000,000,000,000,000 | 
+| Ether | 1e18wei | 1,000,000,000,000,000,000 | 
+
+Ether can be broken down into smaller units. 
+Gwei is known as Shannon, MilliEther is known as Finney. 
+EthDocs.org 
+
+# 2.14-15 Etherscan & Etherstats (Demo) 
+
+Etherscan.io 
+- A blockchain explorer for ethereum. 
+ 
+Network difficulty = how difficult is it for miners to be able to produce a block and get rewarded 
+ 
+Ethstats.net 
+- Tell number of active node 
+- Gas price 
+- Gas limit 
+- Uncle Count 
+- Transactions 
+- Gas Spending 
+
+# 2.16 Blockchain Decision Path 
+
+Factors to decide which kind of blockchain to use (Permissioned or Permissionless) 
+1) Database 
+2) Multiple Organisation/People 
+3) Trusted 
+4) Uniform Rules 
+5) Immutable 
+6) Frequent TX 
+7) Transparency 
+8) Security 
+9) Compliance 
+ 
+- Ethereum is cheaper than Hyperledger 
+- Ethereum is permissionless/public whereas Hyperledger is Permissioned/Privated.
+
+![img](img/2.16_01.png)
 
 
