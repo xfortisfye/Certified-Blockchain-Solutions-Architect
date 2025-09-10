@@ -1,5 +1,3 @@
-Own Notes
-
 # 2.4 Blockchain Components
 
 ## Blockchain Key Component
