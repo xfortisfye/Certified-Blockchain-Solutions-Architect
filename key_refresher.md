@@ -601,3 +601,225 @@ Ganache
   - Access the state and properties of an already deployed Smart Contract 
   - Debug already committed transaction 
   - Analyse solidity code to reduce coding mistakes and to enforce best practices 
+
+# 11.1 Hyperledger Basics Overview
+
+Hyperledger is an open-source project hosted by Linux Foundation
+- Hyperledger is a popular blockchain solution among enterprises 
+- A global open-source collaboration (e.g., IBM) involving leaders from numerous industries 
+  - Hyperledger is not one solution, it is a portfolio of different blockchain solutions that are integrated or more complementary to each other.
+
+# 11.2 Hyperledger Portfolio Overview 
+
+Hyperledger Project has a modular schema to enable different facets of the Hyperledger Project and provide specific solutions for businesses 
+- Infrastructure 
+- Frameworks 
+- Tools 
+ 
+Infrastructure Module 
+- Leadership 
+- Governing Board 
+- Marketing 
+- Technical Steering Committee 
+ 
+Framework Module 
+- <details><summary>Hyperledger Indy</summary> 
+  - Tools, library, and reusable components for providing digital identities rooted on blockchains or other distributed ledgers so that they are interoperable across administrative domains, applications, and any other silo 
+    - Provides the capability to integrate with other solutions</details>
+- <details><summary>Hyperledger Fabric</summary> 
+  - Act as the foundation area for developing applications or blockchain solutions with a modular architecture 
+  - Allows components such as consensus and membership services to be plug-and-play 
+    - Able to add cryptocurrency capabilities as well with little bit of backend work </details>
+- <details><summary>Hyperledger Iroha</summary>  
+  - A business blockchain framework that is designed to be simple and easy to incorporate into infrastructural projects requiring distributed ledger technology 
+    - A different approach but less complex than Fabric</details> 
+- <details><summary>Hyperledger Sawtooth</summary> 
+  - A modular platform for building, deploying, and running distributed ledgers 
+  - Includes a novel consensus algorithm, Proof of Elapsed Time (PoET), which targets large distributed validator populations with minimal resource consumption</details> 
+- <details><summary>Hyperledger Burrow (like a blockchain client)</summary>
+  - Permissionable smart contract machine 
+    - First of its kind when released in 2014 
+  - Provides a modular blockchain client with a permissioned smart contract interpreter built in part to the specification of EVM </details>
+ 
+Tools Module 
+- <details><summary>Hyperledger Quilt</summary> 
+  - A development from NTT data, is a Java implementation of the inter-ledger protocol by Ripple, which is designed to transfer values across distributed and non-distributed ledgers 
+    - Able to tie in other cryptocurrencies if needed or integrate Ripple with your blockchain</details> 
+- <details><summary>Hyperledger Cello</summary> 
+  - Contributed by IBM 
+  - Seeks to bring the on demand as-a-service deployment model into the blockchain ecosystem in order to reduce the effort required to create, manage, and terminate blockchains</details> 
+- <details><summary>Hyperledger Composer</summary> 
+  - Contributed by IBM and Oxchains 
+  - Set of collaboration tools for building blockchain business networks that accelerate the development of smart contracts and blockchain applications, as well as their deployment across a distributed ledger 
+  - Go-to tool for Hyperledger when it comes to developing and deploying the blockchain solution</details> 
+- <details><summary>Hyperledger Explorer</summary>
+  - Originally contributed by IBM, Intel and DTCC (Depository Trust Corporation) 
+  - It can view, invoke, deploy or query blocks, transactions and associated data, network information (name, status, list of nodes), chain codes and transaction families and other relevant information stored in the ledger 
+    - Similar to Ethereum blockchain Explorer 
+  - Goal is to see what is going on in the ledger</details>
+- <details><summary>Hyperledger Caliper</summary> 
+  - Blockchain benchmark tool that allows users to measure performance of a specific implementation with predefined use cases 
+  - It's in Alpha mode at time of writing (2017) 
+  - Contributed by developers of numerous organisation</details>
+
+# 11.3 Hyperledger Fabric Reference Architecture
+
+Hyperledger is an enterprise blockchain that contains services such as APIs, SDKs, CLIs. 
+- Membership Service 
+  - Permission to access as we do not want to let any node into our network 
+- Blockchain Service 
+- Transaction Service 
+- Chain Code / Smart Contract Code 
+
+Under services, you have security, general services and chain code. 
+- Security 
+  - Registration, Identity and Access Management, High Availability 
+- General Service 
+  - Consensus Algorithm, Ledger, P2P Communication Protocol, Storage (for ledger) 
+- Chaincode 
+  - Deployed in container, has container service, and container registry 
+ 
+# 12.2 Hyperledger Fabric Model
+
+![img](img/12.2_01.png)
+
+Hyperledger Fabric is a permissioned enterprise blockchain, very modular with a lot of built-in capabilities with specific distinctions. 
+- Two specific functions: Define and Invoke 
+  - Users are able to deploy the code 
+  - Invoke code by the transactions 
+  - Able to deploy and invoke at the same time 
+- Validation standpoint 
+  - Entities are validators and could be the users as well 
+  - Thus in Hyperledger, you can have validators and users
+
+# 13.2 Hyperledger Composer
+
+![img](img/13.2_01.png)
+
+Hyperledger Composer is important to Hyperledger Fabric as Hyperledger Composer allows developers to build and deploy application on top of an abstraction layer for Hyperledger Fabric. 
+ 
+Hyperledger Composer main benefits 
+- Easy 
+  - Not much learning curve if you are already developing in a specific language (e.g., Go or Java) that is well integrated. 
+- Efficient 
+  - Quick and easy as it is driven by workflows. 
+- Risk Reduction 
+  - A lot of built-in tools which alleviate a lot of the risks subjected to code 
+- Flexible 
+  - Able to vary based on how you want to use it 
+ 
+- Hyperledger Fabric is going to be what you're going to deploy to Compose the applications to Fabric.  
+- Application layer is going to be on top of Composer. 
+- At a high level, Composer sits in the middle between Application and Fabric. 
+- For Composer, inputs are sent to the ledger where the ledger is immutable. The outputs will got to a datastore and that's Hyperledger Composer at a high level.
+
+# 14.1 Hyperledger Design 
+
+Hyperledger Fabric is a blockchain implementation that is designed for deploying a modular and extensible architecture. 
+- It has a modular subsystem design so that different implementations can be plugged in and implemented over time. 
+ 
+Modular and extensible 
+- Modularity in all components of all frameworks 
+  - Consensus layer 
+  - Smart Contract layer 
+  - Communication layer 
+  - Data Store 
+  - Identity Services (Root of Trust - to identify the participants) 
+  - APIs 
+  - And more components 
+ 
+Interoperability 
+- This principle is around backward interoperability and not focused on the interoperability between the various Hyperledger project-powered blockchain systems or business networks 
+ 
+Secure Solutions 
+- Enterprise and therefore business network security is paramount 
+- The focus is on the interaction between components and the structure that governs the permissioning nature of permissioned blockchains 
+ 
+Token or Cryptocurrency Agnostic 
+- Hyperledger projects do not use crypto-assets, cryptocurrency, tokens, or coin-like constructs as incentive mechanics to establish trust systems. 
+  - Can construct mechanisms to establish a trust between a system like Ripple or any other Cryptocurrency 
+ 
+Rich APIs 
+- The focus here is to ensure that blockchain systems have not only enterprise middleware access but instead access to business networks, existing participants and new systems without exposing the details of blockchain powered business networks. 
+  - Not only do you have the enterprise middleware access, and the additional capabilities to extend your network and ecosystem 
+ 
+Deploying Hyperledger Fabric 
+- Hyperledger Fabric architecture can vary with each deployment due to its flexibility from modular architecture 
+  - For a test and deploy environment, we might want to deploy two organisations, four perinodes and one certificate of authority and a solo auditor. 
+- Production architecture should have a clustered CA and implement the correct number of orderer services 
+- In a Hyperledger Fabric network, all the nodes should be clustered for availability, and all the block data and certification files should be backed up 
+  - For best practices, whether it's Ethereum or Hyperledger, there are basics that we need to know such as availability, such as HA (High Availability), or fail over. 
+    - Allow us to address any kind of issues in case an infrastructure go down in one area for other part to take over. 
+- Production, test and development may want to be handled and design differently for each projects 
+- Hyperledger Fabric is designed to be secure, but does not mean your deployment is automatically secure 
+- Hyperledger Explorer can be used to interactively monitor the current Hyperledger Fabric network 
+
+# 14.2 Hyperledger Fabric Design
+
+Membership Services 
+- This module is a permissioning module and act as a vehicle to establish a root of trust during network creation as this is instrumental in ensuring and managing the identity of members to determine who is going to access the blockchain 
+ 
+Transactions 
+- A transaction is a request to the blockchain to execute a function on the ledger 
+- Function is implemented by a chaincode 
+ 
+Smart Contract / Chaincode Services (Chaincode is an acronym for smart contract for Hyperledger) 
+- Chaincode is an application-level code stored on the ledger as a part of a transaction 
+- Chaincode runs transactions that may modify the world state 
+- Transaction logic is written as chaincode (Go or JavaScript languages) and executes in secure Docker container 
+- Chaincode is installed on peers, which require access to the asset states to perform reads and writes 
+
+# 14.3 Hyperledger Playground 
+
+Hyperledger Composer Playground 
+- A tool which provides an environment that quickly model and test a blockchain network 
+- [Composer](https://composer-playground.mybluemix.net/login) has a simple Graphical UI to edit and test the business blockchain network 
+- Makes highly complex blockchain network easy for running blockchain testing 
+- There is an online and offline version of Playground 
+  - Online playground runs the business network in browser memory 
+    - Convenient when you don't have the full downloaded blockchain or the full environment available 
+  - Local playground is deployed in Hyperledger Fabric instances 
+- Do you need the full Hyperledger Fabric instance or just enough to run in local memory 
+
+# 14.4 Hyperledger Terminology
+
+Block 
+- An ordered set of transactions that is cryptographically linked to the preceding block(s) on a channel 
+ 
+Chain 
+- The ledger's chain is a transaction log structured as hash-linked blocks of transactions 
+- Essentially sequence of the blockchain 
+ 
+Chaincode (i.e., a Smart Contract in Ethereum) 
+- A smart contract is code - invoked by a client application external to the blockchain network - that manages access and modifications to a set of key-value pairs in the World State 
+ 
+Channel 
+- Private blockchain overlay which allows for data isolation and confidentiality 
+  - Instead of sending your transactions over the whole blockchain, we could set up a channel and delegate the transaction to only a specific node(s). 
+- Channel-specific ledger that is shared across the peers in the channel, and transacting parties must be properly authenticated to a channel in order to interact with it 
+ 
+Consensus 
+- Broader term overarching the entire transactional flow, which serves to generate an agreement on the order and to confirm the correctness of the set of transactions constituting a block 
+ 
+Endorsement 
+- Process where specific peer nodes execute a chaincode transaction and return a proposal response to the client application 
+  - Allow flexibility on executing chaincode 
+ 
+Genesis Block 
+- Configuration block that initialise the ordering service, or serve as the first block on a chain 
+ 
+Gossip Protocol 
+- The gossip data dissemination protocol performs three function 
+  - Manages peer discovery and channel membership 
+  - Disseminates ledger data across all peers on the channel 
+  - Syncs ledger state across all peers on the channel 
+ 
+State Database 
+- Data is stored in a state database for efficient reads and queries from a chaincode 
+  - Useful when want to increase performance or mitigate having to using the full blockchain  
+- Supported databases include level DB and couchDB 
+ 
+World State / Current state 
+- A component of Hyperledger Fabric Ledger 
+- Represents the latest values for all keys included in the chain transaction log 
+- A specific snapshot at when the blockchain ledger is being looked at or reviewed 
