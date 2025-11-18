@@ -634,7 +634,7 @@ Dubai Blockchain strategy benefits
 B2C Use Case 
 - A Business-to-Consumer (B2C) is business or transactions conducted directly between a company and consumers who are the end-users of its products or services. 
 - Services being provided to the consumer is an area of interest to the company 
--Consumers increasingly want more transparency in the services and products they purchases 
+- Consumers increasingly want more transparency in the services and products they purchases 
 - Some area of focus 
   - Food Supply Traceability 
   - Resource Procurement 
